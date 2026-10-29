@@ -47,7 +47,8 @@ async function startServer() {
       console.log(`Backend dang chay tai cong ${PORT}`);
     });
   } catch (error) {
-    console.error('Khong the khoi dong backend:', error.message);
+    console.error('Khong the khoi dong backend:');
+    console.error(error.stack || error);
     process.exit(1);
   }
 }
